@@ -11,35 +11,42 @@ font-family:Arial, Helvetica, sans-serif;
 background:linear-gradient(
 135deg,
 #0a1f44 0%,
-#163d8c 40%,
+#163d8c 50%,
 #2e86ff 100%
 );
 
 color:white;
 
-line-height:1.6;
-
 text-align:center;
+
+line-height:1.6;
 
 min-height:100vh;
 
 }
 
 
-/* HERO */
+/* CONTAINER */
 
-.hero{
+.container{
 
-padding:70px 20px;
 max-width:900px;
+
 margin:auto;
+
+padding:60px 20px;
 
 }
 
-.hero h1{
+
+/* TITULOS */
+
+.title{
 
 font-size:44px;
+
 font-weight:800;
+
 margin-bottom:15px;
 
 }
@@ -47,21 +54,24 @@ margin-bottom:15px;
 .subtitle{
 
 font-size:20px;
+
 opacity:0.9;
 
 max-width:650px;
+
 margin:auto;
 
 }
 
 
-/* TIMER */
+/* ESCASSEZ */
 
-.timer{
+.scarcity{
 
 margin-top:25px;
 
 background:#ffd166;
+
 color:#000;
 
 display:inline-block;
@@ -72,21 +82,22 @@ border-radius:8px;
 
 font-weight:bold;
 
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
+box-shadow:0 6px 20px rgba(0,0,0,0.35);
 
 }
 
 
-/* HERO IMAGE */
+/* IMAGEM HERO */
 
 .hero-img{
 
 width:100%;
+
 max-width:460px;
 
 border-radius:15px;
 
-margin:40px auto;
+margin:35px auto;
 
 display:block;
 
@@ -95,11 +106,12 @@ box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
 
-/* PRICE BOX */
+/* CAIXA DE PREÇO */
 
 .price-box{
 
 background:white;
+
 color:#111;
 
 padding:35px;
@@ -123,7 +135,7 @@ transform:translateY(-6px);
 }
 
 
-/* OLD PRICE */
+/* PREÇO ANTIGO */
 
 .old-price{
 
@@ -138,7 +150,7 @@ margin-bottom:5px;
 }
 
 
-/* PRICE */
+/* PREÇO */
 
 .price{
 
@@ -153,9 +165,9 @@ margin-bottom:10px;
 }
 
 
-/* PRICE DESC */
+/* INFO PREÇO */
 
-.price-desc{
+.price-info{
 
 color:#555;
 
@@ -166,9 +178,9 @@ font-size:14px;
 }
 
 
-/* BUTTON */
+/* BOTÕES */
 
-.buy-btn{
+.buy-button{
 
 background:linear-gradient(
 45deg,
@@ -196,7 +208,7 @@ box-shadow:0 8px 25px rgba(0,0,0,0.3);
 
 }
 
-.buy-btn:hover{
+.buy-button:hover{
 
 transform:scale(1.08);
 
@@ -205,11 +217,12 @@ box-shadow:0 12px 30px rgba(0,0,0,0.45);
 }
 
 
-/* BIG BUTTON */
+/* BOTÃO GRANDE */
 
 .big{
 
 font-size:22px;
+
 padding:20px 38px;
 
 }
@@ -228,16 +241,17 @@ font-size:15px;
 }
 
 
-/* BENEFITS */
+/* BENEFICIOS */
 
 .benefits{
 
 background:white;
+
 color:#111;
 
 padding:70px 20px;
 
-margin-top:50px;
+margin-top:60px;
 
 }
 
@@ -255,6 +269,7 @@ margin-bottom:40px;
 .cards{
 
 display:flex;
+
 flex-wrap:wrap;
 
 justify-content:center;
@@ -359,6 +374,7 @@ margin-bottom:30px;
 position:fixed;
 
 bottom:25px;
+
 left:25px;
 
 background:white;
@@ -378,11 +394,11 @@ display:none;
 }
 
 
-/* MOBILE */
+/* RESPONSIVO */
 
 @media(max-width:768px){
 
-.hero h1{
+.title{
 
 font-size:32px;
 
