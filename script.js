@@ -1,17 +1,26 @@
+// ESPERA O SITE CARREGAR
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+// =========================
 // CONTADOR DE ESCASSEZ
+// =========================
 
 let tempo = 600; // 10 minutos
 
 function atualizarContador(){
 
+const contador = document.getElementById("countdown");
+
+if(!contador) return;
+
 let minutos = Math.floor(tempo / 60);
 let segundos = tempo % 60;
 
-if(segundos < 10){
-segundos = "0" + segundos;
-}
+segundos = segundos < 10 ? "0" + segundos : segundos;
 
-document.getElementById("countdown").innerText = minutos + ":" + segundos;
+contador.innerText = minutos + ":" + segundos;
 
 if(tempo > 0){
 tempo--;
@@ -23,25 +32,26 @@ setInterval(atualizarContador,1000);
 
 
 
-// CONTADOR DE PESSOAS NA PÁGINA
+// =========================
+// CONTADOR DE PESSOAS
+// =========================
 
 let viewers = 18;
 
 function atualizarViewers(){
 
+const viewersElement = document.getElementById("viewers");
+
+if(!viewersElement) return;
+
 let variacao = Math.floor(Math.random() * 5) - 2;
 
-viewers = viewers + variacao;
+viewers += variacao;
 
-if(viewers < 12){
-viewers = 12;
-}
+if(viewers < 12) viewers = 12;
+if(viewers > 35) viewers = 35;
 
-if(viewers > 34){
-viewers = 34;
-}
-
-document.getElementById("viewers").innerText = viewers;
+viewersElement.innerText = viewers;
 
 }
 
@@ -49,35 +59,9 @@ setInterval(atualizarViewers,4000);
 
 
 
-
+// =========================
 // POPUP DE COMPRAS
-
-const nomes = [
-
-"Lucas",
-"Maria",
-"Pedro",
-"Ana",
-"Gabriel",
-"Rafael",
-"Beatriz",
-"João",
-"Samuel",
-"Daniel"
-
-];
-
-function mostrarPopup(){
-
-const popup = document.getElementById("popup");
-
-let nome = nomes[Math.floor(Math.random()*nomes.length)];
-
-popup.innerText = nome + " acabou de comprar o Quiz Bíblico";
-
-popup.style.display = "block";
-
-setTimeout(()=>{
+// =========================
 
 const nomes = [
 "Lucas","Maria","Pedro","Ana","Gabriel",
@@ -94,8 +78,9 @@ function mostrarPopup(){
 
 const popup = document.getElementById("popup");
 
-let nome = nomes[Math.floor(Math.random()*nomes.length)];
+if(!popup) return;
 
+let nome = nomes[Math.floor(Math.random()*nomes.length)];
 let cidade = cidades[Math.floor(Math.random()*cidades.length)];
 
 popup.innerHTML = `
@@ -109,11 +94,11 @@ acabou de comprar o Quiz Bíblico
 popup.classList.add("show");
 
 setTimeout(()=>{
-
 popup.classList.remove("show");
-
 },4000);
 
 }
 
 setInterval(mostrarPopup,9000);
+
+});
