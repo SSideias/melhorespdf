@@ -78,35 +78,289 @@ font-size:18px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 
 transition:0.3s;
-  
-}
-
-.btn{
-
-animation:pulse 2s infinite;
 
 }
 
-@keyframes pulse{
+.btn:hover{
 
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.05);
-}
-
-100%{
-transform:scale(1);
-}
+transform:scale(1.07);
 
 }
 
- }
 .big{
 
 font-size:22px;
+
+padding:20px 36px;
+
+}
+
+
+/* DEMO */
+
+.demo{
+
+background:white;
+
+color:#222;
+
+padding:70px 20px;
+
+}
+
+.demo h2{
+
+margin-bottom:40px;
+
+font-size:32px;
+
+}
+
+
+/* VERSO */
+
+.verse{
+
+max-width:600px;
+
+margin:auto;
+
+background:#f9f6ea;
+
+padding:25px;
+
+border-radius:10px;
+
+margin-bottom:30px;
+
+}
+
+.verse-title{
+
+color:#c8a100;
+
+font-weight:bold;
+
+margin-bottom:10px;
+
+}
+
+.verse-text{
+
+font-style:italic;
+
+font-size:20px;
+
+}
+
+.verse-ref{
+
+color:#555;
+
+margin-top:5px;
+
+}
+
+
+/* PERGUNTA */
+
+.question{
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.question-title{
+
+font-weight:bold;
+
+margin-bottom:10px;
+
+font-size:20px;
+
+}
+
+.option{
+
+display:block;
+
+width:100%;
+
+max-width:400px;
+
+margin:10px auto;
+
+padding:14px;
+
+border:none;
+
+border-radius:8px;
+
+background:#1e88e5;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.option:hover{
+
+background:#1565c0;
+
+}
+
+
+/* BENEFÍCIOS */
+
+.benefits{
+
+padding:80px 20px;
+
+}
+
+.benefits h2{
+
+font-size:32px;
+
+margin-bottom:30px;
+
+}
+
+.benefits ul{
+
+list-style:none;
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.benefits li{
+
+font-size:20px;
+
+margin:12px 0;
+
+}
+
+
+/* PREÇO */
+
+.price{
+
+background:white;
+
+color:#222;
+
+padding:70px 20px;
+
+}
+
+.price h2{
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.old{
+
+text-decoration:line-through;
+
+color:#888;
+
+font-size:20px;
+
+}
+
+.new{
+
+font-size:60px;
+
+color:#e53935;
+
+font-weight:bold;
+
+margin-bottom:25px;
+
+}
+
+
+/* TIMER */
+
+.timer{
+
+margin-top:20px;
+
+font-weight:bold;
+
+}
+
+
+/* CTA */
+
+.cta{
+
+padding:80px 20px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.cta h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.cta p{
+
+font-size:18px;
+
+margin-bottom:30px;
+
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.demo h2,
+.benefits h2,
+.price h2,
+.cta h2{
+
+font-size:26px;
+
+}
+
+.new{
+
+font-size:48px;
+
+}
+
+}font-size:22px;
 
 padding:20px 36px;
 
