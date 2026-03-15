@@ -10,9 +10,9 @@ font-family:Arial, Helvetica, sans-serif;
 
 background:linear-gradient(
 135deg,
-#0a1f44 0%,
-#163d8c 50%,
-#2e86ff 100%
+#0f2a44,
+#163e6e,
+#1e5aa5
 );
 
 color:white;
@@ -21,92 +21,346 @@ text-align:center;
 
 line-height:1.6;
 
-min-height:100vh;
-
 }
 
 
-/* CONTAINER */
+/* HERO */
 
-.container{
+.hero{
 
-max-width:900px;
+padding:80px 20px;
+
+max-width:800px;
 
 margin:auto;
 
-padding:60px 20px;
+}
+
+.hero h1{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+opacity:0.9;
 
 }
 
 
-/* TITULOS */
+/* BOTÃO */
 
-.title{
+.btn{
 
-font-size:44px;
+display:inline-block;
 
-font-weight:800;
+background:#27ae60;
+
+color:white;
+
+padding:16px 28px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.07);
+
+}
+
+.big{
+
+font-size:22px;
+
+padding:20px 36px;
+
+}
+
+
+/* DEMO */
+
+.demo{
+
+background:white;
+
+color:#222;
+
+padding:70px 20px;
+
+}
+
+.demo h2{
+
+margin-bottom:40px;
+
+font-size:32px;
+
+}
+
+
+/* VERSO */
+
+.verse{
+
+max-width:600px;
+
+margin:auto;
+
+background:#f9f6ea;
+
+padding:25px;
+
+border-radius:10px;
+
+margin-bottom:30px;
+
+}
+
+.verse-title{
+
+color:#c8a100;
+
+font-weight:bold;
+
+margin-bottom:10px;
+
+}
+
+.verse-text{
+
+font-style:italic;
+
+font-size:20px;
+
+}
+
+.verse-ref{
+
+color:#555;
+
+margin-top:5px;
+
+}
+
+
+/* PERGUNTA */
+
+.question{
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.question-title{
+
+font-weight:bold;
+
+margin-bottom:10px;
+
+font-size:20px;
+
+}
+
+.option{
+
+display:block;
+
+width:100%;
+
+max-width:400px;
+
+margin:10px auto;
+
+padding:14px;
+
+border:none;
+
+border-radius:8px;
+
+background:#1e88e5;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.option:hover{
+
+background:#1565c0;
+
+}
+
+
+/* BENEFÍCIOS */
+
+.benefits{
+
+padding:80px 20px;
+
+}
+
+.benefits h2{
+
+font-size:32px;
+
+margin-bottom:30px;
+
+}
+
+.benefits ul{
+
+list-style:none;
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.benefits li{
+
+font-size:20px;
+
+margin:12px 0;
+
+}
+
+
+/* PREÇO */
+
+.price{
+
+background:white;
+
+color:#222;
+
+padding:70px 20px;
+
+}
+
+.price h2{
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.old{
+
+text-decoration:line-through;
+
+color:#888;
+
+font-size:20px;
+
+}
+
+.new{
+
+font-size:60px;
+
+color:#e53935;
+
+font-weight:bold;
+
+margin-bottom:25px;
+
+}
+
+
+/* TIMER */
+
+.timer{
+
+margin-top:20px;
+
+font-weight:bold;
+
+}
+
+
+/* CTA */
+
+.cta{
+
+padding:80px 20px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.cta h2{
+
+font-size:32px;
 
 margin-bottom:15px;
 
 }
 
-.subtitle{
+.cta p{
 
-font-size:20px;
+font-size:18px;
 
-opacity:0.9;
-
-max-width:650px;
-
-margin:auto;
+margin-bottom:30px;
 
 }
 
 
-/* ESCASSEZ */
+/* RESPONSIVO */
 
-.scarcity{
+@media(max-width:768px){
 
-margin-top:25px;
+.hero h1{
 
-background:#ffd166;
-
-color:#000;
-
-display:inline-block;
-
-padding:12px 25px;
-
-border-radius:8px;
-
-font-weight:bold;
-
-box-shadow:0 6px 20px rgba(0,0,0,0.35);
+font-size:30px;
 
 }
 
+.demo h2,
+.benefits h2,
+.price h2,
+.cta h2{
 
-/* IMAGEM HERO */
-
-.hero-img{
-
-width:100%;
-
-max-width:460px;
-
-border-radius:15px;
-
-margin:35px auto;
-
-display:block;
-
-box-shadow:0 20px 40px rgba(0,0,0,0.5);
+font-size:26px;
 
 }
 
+.new{
 
-/* CAIXA DE PREÇO */
+font-size:48px;
+
+}
+
+  }/* CAIXA DE PREÇO */
 
 .price-box{
 
