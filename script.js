@@ -2,13 +2,25 @@
 // QUIZ INTERATIVO
 // =====================
 
-function responder(){
+function verificarResposta(opcao){
 
 let resposta = document.getElementById("resposta");
 
-resposta.innerHTML = "✔ Resposta correta: Deus criou os céus e a terra.";
+if(opcao === "B"){
 
-resposta.style.color = "green";
+resposta.innerHTML = "✅ Resposta correta! Deus criou os céus e a terra.";
+
+resposta.style.color = "lime";
+
+}
+
+else{
+
+resposta.innerHTML = "❌ Resposta incorreta. Tente novamente.";
+
+resposta.style.color = "red";
+
+}
 
 }
 
