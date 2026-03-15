@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Quiz Bíblico para Jovens</title>
+<title>100 Perguntas Bíblicas</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,53 +14,61 @@
 
 <body>
 
-<section class="hero">
 
-<div class="container">
+<header class="hero">
 
-<h1 class="title">
-🔥 Você Realmente Conhece a Bíblia?
-</h1>
+<h1>📖 Você realmente conhece a Bíblia?</h1>
 
-<p class="subtitle">
-Descubra agora com o Quiz Bíblico criado especialmente para jovens e adolescentes.
+<p>
+Teste seu conhecimento com <strong>100 perguntas bíblicas</strong>
+baseadas nas Escrituras.
 </p>
 
-<div class="scarcity">
-⏳ Oferta especial termina em <span id="countdown">10:00</span>
+<a href="https://pixgo.org/pay/dlwNSh8Efvfo" class="btn">
+Quero testar meu conhecimento
+</a>
+
+</header>
+
+
+<section class="demo">
+
+<h2>Veja como funciona</h2>
+
+<div class="verse">
+
+<p class="verse-title">Versículo</p>
+
+<p class="verse-text">
+"No princípio criou Deus os céus e a terra."
+</p>
+
+<p class="verse-ref">(Gênesis 1:1)</p>
+
 </div>
 
-<img class="hero-img"
-src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65">
 
-<div class="price-box">
+<div class="question">
 
-<p class="old-price">
-De R$29,90
+<p class="question-title">Pergunta</p>
+
+<p>
+Segundo o relato bíblico, quem criou os céus e a terra?
 </p>
 
-<p class="price">
-R$10
-</p>
+<button onclick="responder()" class="option">
+Deus
+</button>
 
-<p class="price-info">
-Pagamento único • Acesso imediato
-</p>
+<button onclick="responder()" class="option">
+Moisés
+</button>
 
-<a class="buy-button"
-href="https://pixgo.org/pay/dlwNSh8Efvfo">
+<button onclick="responder()" class="option">
+Abraão
+</button>
 
-QUERO ACESSAR O QUIZ AGORA
-
-</a>
-<a href="https://pixgo.org/pay/dlwNSh8Efvfo" class="floating-buy">
-Comprar Agora
-</a>
-</div>
-
-<p class="viewers">
-👀 <span id="viewers">18</span> pessoas vendo essa oferta agora
-</p>
+<p id="resposta"></p>
 
 </div>
 
@@ -69,44 +77,65 @@ Comprar Agora
 
 <section class="benefits">
 
-<h2>
-Por que esse Quiz é perfeito para jovens?
-</h2>
+<h2>O que você recebe</h2>
 
-<div class="cards">
+<ul>
 
-<div class="card">
+<li>📖 100 perguntas bíblicas</li>
 
-<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+<li>🧠 Baseadas nas Escrituras</li>
 
-<h3>Desafio Bíblico</h3>
+<li>👥 Ideal para jovens e igrejas</li>
 
-<p>
-Perguntas que testam realmente seu conhecimento da Bíblia.
+<li>🎯 Perfeito para estudos bíblicos</li>
+
+<li>🔥 Desafios entre amigos</li>
+
+</ul>
+
+</section>
+
+
+<section class="price">
+
+<h2>Oferta Especial</h2>
+
+<p class="old">De R$29,90</p>
+
+<p class="new">R$10</p>
+
+<a href="https://pixgo.org/pay/dlwNSh8Efvfo" class="btn big">
+Receber meu PDF agora
+</a>
+
+<p class="timer">
+⏳ Oferta termina em
+<span id="countdown">10:00</span>
 </p>
 
-</div>
+</section>
 
 
-<div class="card">
+<section class="cta">
 
-<img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df">
-
-<h3>Perfeito para Igrejas</h3>
+<h2>📖 Desafie seus amigos</h2>
 
 <p>
-Ideal para grupos de jovens, células e encontros cristãos.
+Baixe agora o PDF com 100 perguntas da Bíblia
+e veja quem realmente conhece as Escrituras.
 </p>
 
-</div>
+<a href="https://pixgo.org/pay/dlwNSh8Efvfo" class="btn">
+Garantir meu acesso
+</a>
+
+</section>
 
 
-<div class="card">
+<script src="script.js"></script>
 
-<img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2">
-
-<h3>Aprendizado Divertido</h3>
-
+</body>
+</html>
 <p>
 Aprenda mais sobre a Bíblia de forma leve e divertida.
 </p>
