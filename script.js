@@ -119,3 +119,45 @@ document.getElementById("resultado").innerText =
 // INICIAR QUIZ
 
 carregarPergunta();
+
+const depoimentos = [
+
+"Esse quiz foi muito divertido! Fiz com os jovens da igreja 🙌",
+
+"Usei esse PDF no grupo de jovens e todos amaram!",
+
+"Não achei que sabia tão pouco da Bíblia 😅 muito bom!",
+
+"Comprei e usei no estudo bíblico. Foi incrível!",
+
+"As perguntas são muito boas. Vale muito a pena."
+
+];
+
+let depoimentoIndex = 0;
+
+function trocarDepoimento(){
+
+const elemento = document.getElementById("video-text");
+
+if(!elemento) return;
+
+depoimentoIndex++;
+
+if(depoimentoIndex >= depoimentos.length){
+depoimentoIndex = 0;
+}
+
+elemento.style.opacity = 0;
+
+setTimeout(()=>{
+
+elemento.innerText = depoimentos[depoimentoIndex];
+
+elemento.style.opacity = 1;
+
+},400);
+
+}
+
+setInterval(trocarDepoimento,4000);
