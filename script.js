@@ -107,10 +107,12 @@ document.getElementById("progress").style.width = progresso + "%";
 
 function mostrarVenda(){
 
-document.getElementById("quiz-container").style.display = "none";
+document.getElementById("quiz-container").style.display="none";
 
-document.getElementById("sales-page").style.display = "block";
+document.getElementById("sales-page").style.display="block";
 
+document.getElementById("resultado").innerText =
+"Você acertou " + pontuacao + " de " + perguntas.length + " perguntas!";
 }
 
 
