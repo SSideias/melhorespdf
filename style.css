@@ -277,6 +277,70 @@ font-size:20px;
 
 .answer{
 width:95%;
+
+  
+/* PROVA SOCIAL */
+
+.prova-social{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.video-fake{
+
+width:320px;
+
+height:320px;
+
+background:#000;
+
+border-radius:15px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:20px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.video-text{
+
+color:white;
+
+font-size:18px;
+
+line-height:1.4;
+
+text-align:center;
+
+animation:fadeVideo 1s;
+
+}
+
+@keyframes fadeVideo{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
 }
 
 }
