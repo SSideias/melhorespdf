@@ -123,10 +123,10 @@ carregarPergunta();
 const comentariosData = [
 
 {nome:"Lucas", texto:"Comprei esse quiz e usei no grupo de jovens 🙌"},
-{nome:"Mariana", texto:"Achei que sabia muito da Bíblia... errei várias 😂"},
-{nome:"Rafael", texto:"As perguntas são muito boas mesmo"},
+{nome:"Mariana", texto:"Achei que sabia muito da Bíblia 😂"},
+{nome:"Rafael", texto:"As perguntas são muito boas"},
 {nome:"Juliana", texto:"Usei no estudo bíblico da igreja"},
-{nome:"Pedro", texto:"Vale muito a pena pelo preço"}
+{nome:"Pedro", texto:"Muito bom pelo preço"}
 
 ];
 
@@ -155,7 +155,7 @@ const mensagem = document.createElement("div");
 
 const tipo = Math.random() > 0.5 ? "usuario" : "outro";
 
-mensagem.classList.add("mensagem", tipo);
+mensagem.className = "mensagem " + tipo;
 
 mensagem.innerHTML = `
 
@@ -167,14 +167,16 @@ mensagem.innerHTML = `
 
 `;
 
-container.prepend(mensagem);
+container.appendChild(mensagem);
+
+container.scrollTop = container.scrollHeight;
 
 if(container.children.length > 6){
 
-container.removeChild(container.lastChild);
+container.removeChild(container.firstChild);
 
 }
 
 }
 
-setInterval(adicionarComentario,3000);
+setInterval(adicionarComentario,3500);
