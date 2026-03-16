@@ -1,160 +1,119 @@
+// PERGUNTAS DO QUIZ
 
-
-// =====================
-// CONTADOR DE ESCASSEZ
-// =====================
-
-let tempo = 600; // 10 minutos
-
-function atualizarContador(){
-
-let minutos = Math.floor(tempo/60);
-
-let segundos = tempo % 60;
-
-if(segundos < 10){
-segundos = "0"+segundos;
-}
-
-document.getElementById("countdown").innerText = minutos + ":" + segundos;
-
-if(tempo > 0){
-tempo--;
-}
-
-}
-
-setInterval(atualizarContador,1000);
-
-
-
-
-// =====================
-// POPUP DE COMPRAS
-// =====================
-
-let nomes = [
-"Lucas","Maria","João","Ana",
-"Pedro","Daniel","Samuel","Beatriz"
-];
-
-let cidades = [
-"São Paulo","Rio de Janeiro","Recife",
-"Salvador","Curitiba","Fortaleza"
-];
-
-function mostrarCompra(){
-
-let nome = nomes[Math.floor(Math.random()*nomes.length)];
-
-let cidade = cidades[Math.floor(Math.random()*cidades.length)];
-
-let popup = document.createElement("div");
-
-popup.className = "compra-popup";
-
-popup.innerHTML = `
-<strong>${nome}</strong> de ${cidade}
-acabou de comprar o PDF
-`;
-
-document.body.appendChild(popup);
-
-setTimeout(()=>{
-
-popup.remove();
-
-},4000);
-
-}
-
-setInterval(mostrarCompra,10000);
-
-/* ===========================
-QUIZ BÍBLICO
-=========================== */
-
-const perguntas=[
+const perguntas = [
 
 {
 pergunta:"Quem criou o céu e a terra?",
-respostas:["Moisés","Abraão","Deus","Pedro"],
+respostas:["Abraão","Moisés","Deus","Pedro"],
 correta:2
+},
+
+{
+pergunta:"Quem construiu a arca para sobreviver ao dilúvio?",
+respostas:["Noé","Davi","Paulo","Salomão"],
+correta:0
 },
 
 {
 pergunta:"Quantos dias Deus levou para criar o mundo?",
 respostas:["5","6","7","10"],
 correta:1
-},
-
-{
-pergunta:"Quem construiu a arca?",
-respostas:["Noé","Davi","Paulo","Salomão"],
-correta:0
 }
 
 ];
 
-let indice=0;
-let pontuacao=0;
+let indicePergunta = 0;
+let pontuacao = 0;
+
+
+// CARREGAR PERGUNTA
 
 function carregarPergunta(){
 
-const q=perguntas[indice];
+const perguntaAtual = perguntas[indicePergunta];
 
-document.getElementById("question").innerText=q.pergunta;
+document.getElementById("question").innerText = perguntaAtual.pergunta;
 
-const answers=document.getElementById("answers");
+const answersDiv = document.getElementById("answers");
 
-answers.innerHTML="";
+answersDiv.innerHTML = "";
 
-q.respostas.forEach((resposta,i)=>{
 
-const btn=document.createElement("div");
+perguntaAtual.respostas.forEach((resposta, index)=>{
 
-btn.classList.add("answer");
+const botao = document.createElement("div");
 
-btn.innerText=resposta;
+botao.classList.add("answer");
 
-btn.onclick=()=>responder(i);
+botao.innerText = resposta;
 
-answers.appendChild(btn);
+botao.onclick = ()=> responder(index);
+
+answersDiv.appendChild(botao);
 
 });
 
-let progresso=((indice)/perguntas.length)*100;
 
-document.getElementById("progress").style.width=progresso+"%";
+atualizarProgresso();
 
 }
 
-function responder(i){
 
-if(i===perguntas[indice].correta){
+// RESPONDER
+
+function responder(indiceResposta){
+
+if(indiceResposta === perguntas[indicePergunta].correta){
 
 pontuacao++;
 
 }
 
-document.getElementById("score").innerText="Pontuação: "+pontuacao;
+document.getElementById("score").innerText = "Pontuação: " + pontuacao;
 
-indice++;
+indicePergunta++;
 
-if(indice<perguntas.length){
+
+if(indicePergunta < perguntas.length){
+
+setTimeout(()=>{
 
 carregarPergunta();
 
-}
+},400);
 
+}
 else{
 
-document.getElementById("quiz-container").style.display="none";
-
-document.getElementById("sales-page").style.display="block";
+mostrarVenda();
 
 }
 
 }
+
+
+// ATUALIZAR BARRA
+
+function atualizarProgresso(){
+
+let progresso = ((indicePergunta) / perguntas.length) * 100;
+
+document.getElementById("progress").style.width = progresso + "%";
+
+}
+
+
+// MOSTRAR PÁGINA DE VENDA
+
+function mostrarVenda(){
+
+document.getElementById("quiz-container").style.display = "none";
+
+document.getElementById("sales-page").style.display = "block";
+
+}
+
+
+// INICIAR QUIZ
 
 carregarPergunta();
