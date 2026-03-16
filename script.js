@@ -122,17 +122,26 @@ carregarPergunta();
 
 const comentariosData = [
 
-{nome:"Lucas", texto:"Comprei e usei no grupo de jovens. Foi muito bom!"},
-
+{nome:"Lucas", texto:"Comprei esse quiz e usei no grupo de jovens 🙌"},
 {nome:"Mariana", texto:"Achei que sabia muito da Bíblia... errei várias 😂"},
-
-{nome:"Rafael", texto:"Muito legal esse quiz, recomendo!"},
-
-{nome:"Juliana", texto:"Usei no estudo bíblico e todo mundo participou."},
-
-{nome:"Pedro", texto:"As perguntas são muito boas mesmo."}
+{nome:"Rafael", texto:"As perguntas são muito boas mesmo"},
+{nome:"Juliana", texto:"Usei no estudo bíblico da igreja"},
+{nome:"Pedro", texto:"Vale muito a pena pelo preço"}
 
 ];
+
+function horaAtual(){
+
+const agora = new Date();
+
+let h = agora.getHours();
+let m = agora.getMinutes();
+
+if(m < 10) m = "0"+m;
+
+return h+":"+m;
+
+}
 
 function adicionarComentario(){
 
@@ -142,27 +151,25 @@ if(!container) return;
 
 const random = comentariosData[Math.floor(Math.random()*comentariosData.length)];
 
-const comentario = document.createElement("div");
+const mensagem = document.createElement("div");
 
-comentario.classList.add("comentario");
+const tipo = Math.random() > 0.5 ? "usuario" : "outro";
 
-comentario.innerHTML = `
+mensagem.classList.add("mensagem", tipo);
 
-<div class="avatar">${random.nome[0]}</div>
-
-<div class="comentario-texto">
+mensagem.innerHTML = `
 
 <div class="nome">${random.nome}</div>
 
 <div>${random.texto}</div>
 
-</div>
+<div class="hora">${horaAtual()}</div>
 
 `;
 
-container.prepend(comentario);
+container.prepend(mensagem);
 
-if(container.children.length > 4){
+if(container.children.length > 6){
 
 container.removeChild(container.lastChild);
 
@@ -170,4 +177,4 @@ container.removeChild(container.lastChild);
 
 }
 
-setInterval(adicionarComentario,4000);
+setInterval(adicionarComentario,3000);
